@@ -1,8 +1,8 @@
-def get_prime_numbers(inputNum):
+def get_prime_numbers(newNum):
     num_list = []
     flag = 0
-    if(inputNum > 1):
-        for i in range (2,inputNum+1):
+    if(newNum > 1):
+        for i in range (2,newNum+1):
             flag = 0
             for j in range (2,i):
                 if(i%j == 0):
