@@ -1,14 +1,8 @@
-import math
-
-
-def is_prime(n):
-    n_sqrt = int(math.sqrt(n)) + 1
-    prime_factors = filter(lambda i: n % i == 0, range(2, n_sqrt))
-    return False if prime_factors else True
+from math import sqrt
 
 
 def get_prime_numbers(n):
-    return filter(is_prime, range(2, n + 1))
+    return [2] if n == 2 else [x for x in range(2, n + 1) if all([x % y for y in range(2, int(sqrt(x) + 1))])]
 
 
 print get_prime_numbers(50)
