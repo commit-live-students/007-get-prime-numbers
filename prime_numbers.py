@@ -6,9 +6,14 @@ def get_prime_numbers (n):
     else:
         primes = []
         nums = range (2,n+1)
+        bigdivisor = math.sqrt(n)
         while nums:
             prime = nums[0]
-            primes.append (prime)
+            if prime > math.sqrt:
+                primes.extend (nums)
+                return primes
+            else:
+                primes.append (prime)
             nums2 = nums[:]
             for x in nums2:
                 if x % prime == 0:
